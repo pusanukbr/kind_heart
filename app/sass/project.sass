@@ -1,0 +1,48 @@
+@import "vars"
+
+#bg
+	width: 100%
+	position: relative
+	background-image: linear-gradient(to left top, #4792E1, #4174B3 34.67%, #363B5D)
+	margin: 0
+	height: 100%
+
+#carousel
+	display: block
+	width: 100%
+	padding-top: 100px
+	.slider-nav
+		width: 100%
+		li
+			opacity: 0.15
+			position: relative
+			font-family: Geometria
+			font-size: 64px
+			font-weight: 800
+			font-style: normal
+			font-stretch: normal
+			line-height: normal
+			letter-spacing: normal
+			text-align: center
+			color: #ffffff
+			&.slick-current
+				opacity: 1
+			&:focus
+				outline: none
+				border: none
+			&:nth-child(3)
+				&:after
+					content: "24"
+					display: block
+					position: absolute
+					font-family: Gilroy
+					font-size: 18px
+					font-weight: 800
+					font-style: normal
+					font-stretch: normal
+					line-height: normal
+					letter-spacing: normal
+					color: $lipstick-two
+					right: 20%
+					top: 50%
+
