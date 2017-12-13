@@ -10,9 +10,11 @@
 #carousel
 	display: block
 	width: 100%
-	padding-top: 100px
+	padding-top: 70px
+
 	.slider-nav
 		width: 100%
+		margin-bottom: 87px
 		li
 			opacity: 0.15
 			position: relative
@@ -25,11 +27,14 @@
 			letter-spacing: normal
 			text-align: center
 			color: #ffffff
+
 			&.slick-current
 				opacity: 1
+
 			&:focus
 				outline: none
 				border: none
+
 			&:nth-child(3)
 				&:after
 					content: "24"
@@ -45,4 +50,123 @@
 					color: $lipstick-two
 					right: 20%
 					top: 50%
+.list_of_projects
+	display: flex
+	flex-direction: column
 
+.list
+	display: flex
+	flex-direction: row
+	align-items: center
+	width: 1240px
+	height: 100px
+	margin: 0 auto 0 150px
+	position: relative
+	overflow: hidden
+	transition: all .3s
+	img
+		width: 400px
+		height: 200px
+		position: relative
+		float: left
+	.text_list
+		display: block
+		height: 200px
+		position: relative
+		border-bottom: 1px solid rgba(255,255,255,.5)
+		.data
+			display: block
+			font-family: Gilroy
+			font-size: 12px
+			font-weight: 300
+			font-style: normal
+			font-stretch: normal
+			line-height: normal
+			letter-spacing: normal
+			text-align: left
+			color: $light-blue-grey
+			margin: 60px 0 0 51px
+		h4
+			margin: 15px 0 100px 49px
+			font-family: "Geometria"
+			font-size: 18px
+			font-weight: 800
+			font-style: normal
+			font-stretch: normal
+			line-height: normal
+			letter-spacing: normal
+			text-align: left
+			color: #ffffff
+		p
+			font-family: Gilroy
+			font-size: 14px
+			font-weight: 300
+			font-style: normal
+			font-stretch: normal
+			line-height: normal
+			letter-spacing: normal
+			text-align: left
+			color: #ffffff
+			padding: 0 150px 0 0
+			margin: 0px 0 12px 50px
+	.list_form_block
+		margin: 0 0 0 0
+		position: absolute
+		top: 10px
+		right: 0
+		visibility: hidden
+		opacity: 0
+		align-content: flex-start
+		.block
+			width: 30px
+			height: 30px
+			position: relative
+			border-radius: 5px
+			background-color: $purpleish
+			margin: 0 0 20px 0
+			a
+				display: block
+				width: 100%
+				height: 100%
+				background-position: center center
+				background-size: 70% 70%
+				background-repeat: no-repeat
+			&:nth-child(1)
+				a
+					background-image: url("../img/hand-ico.svg")
+			&:nth-child(2)
+				a
+					background-image: url("../img/shape-ico.svg")
+			&:nth-child(3)
+				a
+					background-image: url("../img/clothes-ico.svg")
+			&:nth-child(4)
+				a
+					background-image: url("../img/heart-ico.svg")
+	&.active
+		height: 200px
+		.text_list
+			height: 200px
+			.data
+				margin: 10px 0 0 50px
+			h4
+				margin: 15px 0 10px 49px		
+			.money
+				margin: 0px 0 0 50px
+				opacity: 0.5
+				font-family: Gilroy
+				font-size: 14px
+				font-weight: 300
+				font-style: normal
+				font-stretch: normal
+				line-height: normal
+				letter-spacing: normal
+				text-align: left
+				color: $cloudy-blue
+			.number
+				font-size: 18px
+			.country
+				text-transform: uppercase
+		.list_form_block
+			visibility: visible
+			opacity: 1
