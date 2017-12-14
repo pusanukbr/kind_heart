@@ -44,7 +44,11 @@ $(document).ready(function() {
         asNavFor: '.slider-nav',
         infinite: true,
         dots: false,
-        fade: true
+        fade: true,
+        initialSlide: 2,
+        draggable: false,
+        swipe: false,
+        useTransform: true,
     });
     $('.slider-nav').slick({
         slidesToShow: 3,
@@ -56,15 +60,29 @@ $(document).ready(function() {
         centerPadding: '100px',
         arrows: false,
         infinite: false,
-        // fade: true
+        initialSlide: 2,
     });
 
-    $('.list').click(function(e) {
-        $('.list').removeClass('active');
+    $('.one .list').click(function(e) {
+        $('.one .list').removeClass('active');
         $(this).toggleClass('active');
         e.preventDefault();
     });
-
+    $('.two .list').click(function(e) {
+        $('.two .list').removeClass('active');
+        $(this).toggleClass('active');
+        e.preventDefault();
+    });
+    $('.three .list').click(function(e) {
+        $('.three .list').removeClass('active');
+        $(this).toggleClass('active');
+        e.preventDefault();
+    });
+    $('.four .list').click(function(e) {
+        $('.four .list').removeClass('active');
+        $(this).toggleClass('active');
+        e.preventDefault();
+    });
 
 
 
