@@ -44,7 +44,7 @@ body input:required:valid,
 body textarea:required:valid
 	color: #666
 
-html, body
+html
 	height: 100%
 
 body
@@ -55,21 +55,25 @@ body
 	font-family: $default-font
 	overflow-x: hidden
 	opacity: 1
+	height: 100%
 
 .img-responsive
 	display: block
 	max-width: 100%
+	min-height: 100%
 	height: auto
 
 #header
 	width: 100%
 	background-image: url("../img/heart_bg.svg"), url("../img/Triangle.svg"), linear-gradient(to left top, #4792E1, #4174B3 34.67%, #363B5D)
 	position: relative
-	height: 100%
+	min-height: 100%
+	height: auto
 	margin: 0
 	overflow: hidden
 	background-position: 86% 82%, 100% 100%
 	background-repeat: no-repeat
+	margin: 0
 
 .wrapper
 	max-width: 1380px
@@ -131,7 +135,6 @@ body
 				list-style-type: none
 				display: inline-block
 				margin: 0
-
 				a
 					display: block
 					text-decoration: none
@@ -152,12 +155,10 @@ body
 
 					&:hover
 						color: $dusty-red
-
 				.active
 					padding: 0 15px
 					margin: 0 0
 					background-color: rgba(0, 0, 0, 0.2)
-
 					&.help
 						background-image: linear-gradient(270deg, #6082D7 -81.69%, #E73453 100%)
 						padding: 0 25px
@@ -167,7 +168,6 @@ body
 					&:hover
 						opacity: 1
 						color: $light-blue-grey
-
 	.search
 		i
 			padding: 0
@@ -191,17 +191,14 @@ body
 		display: flex
 		transform: translateY(-200%)
 		opacity: 0
-		z-index: 10
+		z-index: 300
 		transition: all 0.3s
-
 		&.visible
 			transform: translateY(0%)
 			opacity: 1
 
 		input
 			position: relative
-
-			// display: block
 			top: 0
 			left: 0
 			font-family: "Geometria"
@@ -275,8 +272,8 @@ body
 		backdrop-filter: blur(20px)
 		transform: translateY(-200%)
 		opacity: 0
+		z-index: 9999
 		transition: all 0.9s cubic-bezier(0.78, -0.67, 0.13, 1.55)
-
 		&.visible
 			transform: translateY(0%)
 			opacity: 1
@@ -433,9 +430,6 @@ body
 			border-radius: 10px
 			background-color: rgba(229, 54, 86, 0.4)
 			box-shadow: 0 0 50px -20px $lipstick, 0 0 30px 0px $purpleish-three
-
-			// box-shadow: 0 0 15px 10px $lipstick, 0 0 7px 2px $purpleish-three
-			// background-color: #000000
 			font-family: Geometria
 			font-size: 18px
 			text-align: center
@@ -512,7 +506,8 @@ body
 	left: 0
 	position: absolute
 	width: 100%
-	height: 100%
+	min-height: 100%
+	height: auto
 	-webkit-filter: blur(20px)
 	filter: blur(20px)
 	background-color: rgba(197, 213, 230, 0.5)
@@ -654,7 +649,8 @@ body
 		width: 42px
 		height: 37.5px
 		background-image: url("../img/Shape.svg")
-
+		
 
 @import "project"
+@import "archive"
 @import "media" // Всегда в конце

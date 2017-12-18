@@ -1,0 +1,51 @@
+#carousel
+	.slider-nav
+		&.arc
+			li
+				&.slick-current
+					&:nth-child(1)
+						&:after
+							content: "156"
+							left: 85%
+					&:nth-child(2)
+						&:after
+							content: "89"
+							left: 100%
+					&:nth-child(3)
+						&:after
+							content: "120"
+					&:nth-child(4)
+						&:after
+							content: "136"
+							left: 90%
+.dots_more
+	display: inline-block
+	position: relative
+	width: 5px
+	height: 5px
+	border-radius: 50%
+	background-color: $light-blue-grey
+	opacity: 1
+	margin-left: 10px
+	&:before
+		content: ""
+		display: block
+		position: relative
+		width: 5px
+		height: 5px
+		border-radius: 50%
+		background-color: $light-blue-grey
+		opacity: 1
+		left: 10px
+		top: 0
+	&:after
+		content: ""
+		display: block
+		position: relative
+		width: 5px
+		height: 5px
+		border-radius: 50%
+		background-color: $light-blue-grey
+		opacity: 1
+		left: 20px
+		top: -100%
