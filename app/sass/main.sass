@@ -643,7 +643,11 @@ body
 	border-radius: 50%
 	background-color: $purpleish-two
 	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 2px 16px 0 $purpleish-two
-
+	z-index: 9999
+	transition: all .3s
+	cursor: pointer
+	&:hover
+		box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 2px 25px 5px $purpleish-two
 	.send
 		position: relative
 		width: 42px
@@ -653,4 +657,6 @@ body
 
 @import "project"
 @import "archive"
+@import "emergency_assistance"
+@import "contacts"
 @import "media" // Всегда в конце
